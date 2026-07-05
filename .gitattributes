@@ -1,0 +1,5 @@
+# Normalize notebooks on `git add` so outputs/exec counts never churn the diff.
+# One-time repo setup (per clone, config isn't versioned):
+#   git config filter.nbnormalize.clean "python tools/nb_normalize.py --stdin"
+*.ipynb filter=nbnormalize text eol=lf
+*.py text eol=lf
