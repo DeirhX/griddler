@@ -1,0 +1,5 @@
+numpy
+matplotlib
+requests
+jupytext>=1.19
+jupyterlab

@@ -41,6 +41,10 @@ def _clean_cell(cell: dict) -> dict:
     if "source" in cell:
         cell["source"] = _as_line_list(cell["source"])
 
+    # Cell ids churn every time a tool (e.g. jupytext) rewrites the notebook and
+    # carry no meaning for a single-file project, so drop them entirely.
+    cell.pop("id", None)
+
     if cell.get("cell_type") == "code":
         cell["outputs"] = []
         cell["execution_count"] = None

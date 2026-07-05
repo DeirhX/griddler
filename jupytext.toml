@@ -1,0 +1,3 @@
+# Pair every notebook with a py:percent script.
+# Edit either side; run `jupytext --sync Griddler.ipynb` to propagate.
+formats = "ipynb,py:percent"
